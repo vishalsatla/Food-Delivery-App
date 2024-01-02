@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "497552026191",
+    "project_id": "foodapp-e7c25",
+    "storage_bucket": "foodapp-e7c25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497552026191:android:76cf5270eb474a5c7f183a",
+        "android_client_info": {
+          "package_name": "uk.ac.tees.mad.w9617154.foodapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDot87ONJjbnetgoV4w1cqKZjSrXMhmnSE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
