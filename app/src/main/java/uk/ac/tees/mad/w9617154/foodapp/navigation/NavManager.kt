@@ -9,7 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import uk.ac.tees.mad.w9617154.foodapp.viewModel.LoginViewModel
 import uk.ac.tees.mad.w9617154.foodapp.views.login.BlankView
 import uk.ac.tees.mad.w9617154.foodapp.views.login.TabsView
-import uk.ac.tees.mad.w9617154.foodapp.views.notes.HomeView
+import uk.ac.tees.mad.w9617154.foodapp.views.recipies.HomeView
 import com.example.recipeapp.Category
 import com.example.recipeapp.CategoryDetailScreen
 import com.example.recipeapp.MainViewModel
