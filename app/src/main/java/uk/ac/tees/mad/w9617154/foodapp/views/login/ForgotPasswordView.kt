@@ -65,7 +65,7 @@ fun ForgotPasswordView(navController: NavController, loginViewModel: LoginViewMo
                 .fillMaxWidth()
                 .padding(start = 30.dp, end = 30.dp)
         ) {
-            Text(text = "Register")
+            Text(text = "Reset Password")
         }
         if (loginViewModel.showAlert) {
             Alert(
