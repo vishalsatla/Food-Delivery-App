@@ -15,48 +15,33 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
-private val darkColorScheme = darkColorScheme(
-    primary = primary80,
-    secondary = secondary50,
-    tertiary = tertiary30,
-    background = neutral90,
-    surface = neutral90,
-    error = error100,
-    outline = primary30,
-    outlineVariant = border,
-
-    onPrimary = neutral0,
-    onSecondary = neutral0,
-    onTertiary = neutral0,
-    onBackground = neutral0,
-    onSurface = neutral0,
-    onError = primary30,
+private val DarkColorScheme = darkColorScheme(
+    primary = Purple80,
+    secondary = PurpleGrey80,
+    tertiary = Pink80
 )
 
-private val lightColorScheme = lightColorScheme(
-    primary = primary50,
-    secondary = secondary80,
-    tertiary = tertiary90,
-    background = neutral0,
-    surface = neutral0,
-    error =  error100,
-    outline = neutral20,
-    outlineVariant = border,
+private val LightColorScheme = lightColorScheme(
+    primary = Purple40,
+    secondary = PurpleGrey40,
+    tertiary = Pink40
 
-    onPrimary = neutral0,
-    onSecondary = neutral0,
-    onTertiary = neutral0,
-    onBackground = neutral100,
-    onSurface = neutral100,
-    onSurfaceVariant = neutral20,
-    onError = error100,
+    /* Other default colors to override
+    background = Color(0xFFFFFBFE),
+    surface = Color(0xFFFFFBFE),
+    onPrimary = Color.White,
+    onSecondary = Color.White,
+    onTertiary = Color.White,
+    onBackground = Color(0xFF1C1B1F),
+    onSurface = Color(0xFF1C1B1F),
+    */
 )
 
 @Composable
-fun FoodApp(
+fun FoodAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = false,
+    dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
@@ -65,8 +50,8 @@ fun FoodApp(
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
-        darkTheme -> darkColorScheme
-        else -> lightColorScheme
+        darkTheme -> DarkColorScheme
+        else -> LightColorScheme
     }
     val view = LocalView.current
     if (!view.isInEditMode) {
@@ -76,14 +61,6 @@ fun FoodApp(
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }
     }
-
-//    SideEffect {
-//        with(view.context as Activity) {
-//            WindowCompat.setDecorFitsSystemWindows(window, false)
-//            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
-//            window.statusBarColor = Color.Transparent.toArgb()
-//        }
-//    }
 
     MaterialTheme(
         colorScheme = colorScheme,
